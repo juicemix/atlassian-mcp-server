@@ -34,6 +34,23 @@ go mod download
 go build -o atlassian-mcp-server main.go
 ```
 
+### Docker Installation
+
+1. Build the Docker image:
+```bash
+docker build -t atlassian-mcp-server .
+```
+
+2. Run with your configuration:
+```bash
+docker run -v $(pwd)/config.yaml:/app/config.yaml atlassian-mcp-server
+```
+
+For HTTP transport mode, expose the port:
+```bash
+docker run -p 8080:8080 -v $(pwd)/config.yaml:/app/config.yaml atlassian-mcp-server
+```
+
 ## Configuration
 
 1. Copy the example configuration file:

@@ -1,0 +1,48 @@
+# Example configuration for Atlassian MCP Server
+# Copy this file to config.yaml and update with your actual values
+
+# Transport configuration
+# Choose either "stdio" for process-based communication or "http" for HTTP-based communication
+transport:
+  type: "stdio"  # Options: "stdio" or "http"
+  
+  # HTTP configuration (only used when type is "http")
+  # http:
+  #   host: "localhost"
+  #   port: 8080
+
+# Atlassian tool configurations
+# Configure only the tools you want to use
+tools:
+  # Jira Server 9.12 configuration
+  jira:
+    base_url: "https://jira.example.com"
+    auth:
+      type: "basic"  # Options: "basic" or "token"
+      username: "your-username"
+      password: "your-password"
+      # For token authentication, use:
+      # type: "token"
+      # token: "your-personal-access-token"
+  
+  # Confluence Server 8.15 configuration
+  confluence:
+    base_url: "https://confluence.example.com"
+    auth:
+      type: "token"
+      token: "your-personal-access-token"
+  
+  # Bitbucket 8.9 configuration
+  bitbucket:
+    base_url: "https://bitbucket.example.com"
+    auth:
+      type: "basic"
+      username: "your-username"
+      password: "your-password"
+  
+  # Bamboo 9.2.7 configuration
+  bamboo:
+    base_url: "https://bamboo.example.com"
+    auth:
+      type: "token"
+      token: "your-personal-access-token"

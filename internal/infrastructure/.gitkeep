@@ -1,0 +1,3 @@
+# Infrastructure layer
+# This layer contains Atlassian API clients, HTTP/stdio transport implementations,
+# configuration file parsing, authentication mechanisms, and external dependencies.

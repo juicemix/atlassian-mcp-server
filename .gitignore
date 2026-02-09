@@ -1,0 +1,15 @@
+# Ignore all markdown files
+*.md
+
+# But keep README.md
+!README.md
+
+# Ignore directories
+.kiro/
+.github/
+
+# Ignore executable file
+atlassian-mcp-server
+
+# Ignore coverage file
+coverage.out
